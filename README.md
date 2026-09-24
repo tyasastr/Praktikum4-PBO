@@ -52,7 +52,6 @@ public AsetIT(String idAset, String namaPerangkat, String lokasi, String statusK
 
 
 #### 2. ManajemenAset
-**Struktur _Source Code_**
 * _Import library_ berupa struktu data _ArrayList_, antarmuka _List_, dan _Iterator_ dari _utility library Java_
 ```java
 package Praktikum4.Tugas;
