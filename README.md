@@ -3,8 +3,13 @@
 ### Identitas
 **Tyasastri Hning Kurniasih (L0325034)**
 
-#### Detail Program
-Untuk memperdalam pemahaman terkait materi praktikum modul 04, dibuat program Manajemen Aset IT. Dibuat beberapa _classes_ dengan rincian: 
+#### Struktur Program
+src/
+└── Praktikum4/
+    └── Tugas/
+        ├── AsetIT.java        # Class model untuk entitas Aset IT
+        ├── ManajemenAset.java # Class controller (mengelola List/LinkedList)
+        └── MainAset.java      # Main class untuk menjalankan program
 #### 1. AsetIT
 * Deklarasi _class_ bernama AsetIT di dalam _package_ Tugas yang berada di dalam _package_ Praktikum4 (Praktikum4.Tugas)
 ```java
@@ -37,32 +42,40 @@ public AsetIT(String idAset, String namaPerangkat, String lokasi, String statusK
         System.out.println("Status Kondisi: " + statusKondisi);
         System.out.println("------------------------------\n");
     }
+}
 ```
 
 
 #### 2. ManajemenAset
+**Struktur _Source Code_**
+* _Import library_ berupa struktu data _ArrayList_, antarmuka _List_, dan _Iterator_ dari _utility library Java_
 ```java
 package Praktikum4.Tugas;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
+```
+* Deklarasi _class_ ManajemenAset dan _attributes collection_ menggunakan _ArrayList<AsetIT>_ untuk menampung _objects_ AsetIT
+```java
 public class ManajemenAset {
-    // attribute
-    private ArrayList<AsetIT> daftarAset;
-    
-    public ManajemenAset() {
+    ArrayList<AsetIT> daftarAset;
+```
+* _Default constructor_ untuk inisialisasi _objects_ di daftarAset dari _ArrayList_
+```java
+public ManajemenAset() {
         this.daftarAset = new ArrayList<>();
     }
-    
-    // objects
-    public void tambahAset(AsetIT asetBaru) {
+```
+* _Method_ tambahAset() untuk menambah 4 _objects_ AsetIT ke daftarAset
+```java
+public void tambahAset(AsetIT asetBaru) {
         daftarAset.add(asetBaru);
     }
-    
-    // for each loop untuk menampilkan data
-    public void tampilkanSemuaAset() {
+```
+* _Method_ tampilkanSemuaAset() untuk menampilkan semua data aset yang tersimpan dengan memanfaatkan _for-each looping_
+```java
+public void tampilkanSemuaAset() {
         if(daftarAset.isEmpty()) {
             System.out.println("Tidak ada aset.");
             return;
@@ -71,9 +84,15 @@ public class ManajemenAset {
             aset.tampilkanInfoAset();
         }
     }
-    
-    // iterator untuk menghapus aset berdasarkan ID
-    public void hapusAset(String idAset) {
+```
+* _Method_ hapusAset() untuk mencari kemudian menghapus data aset menggunakan ID-nya, penerapan mekanisme _iterator_, yaitu:
+   _Iterator<AsetIT> iterator = daftarAset.iterator()_ untuk inisialisasi _iterator_
+   _iterator.hasNext()_ untuk memeriksa ketersediaan elemen berikutnya
+   _iterator.next()_ untuk mengambil referensi elemen yang sedang diakses
+   _equalsIgnoreCase()_ untuk membandingkan ID tanpa pengaruh kapitalisasi huruf
+   _iterator.remove()_ untuk menghapus elemen
+```java
+public void hapusAset(String idAset) {
         Iterator<AsetIT> iterator = daftarAset.iterator();
         boolean ditemukan = false;
         
@@ -94,44 +113,95 @@ public class ManajemenAset {
 }
 ```
 
-**Struktur _Source Code_**
-* _Import library_ berupa struktu data _ArrayList_, antarmuka _List_, dan _Iterator_ dari _utility library Java_
-* Deklarasi _attributes collection_ menggunakan _ArrayList<AsetIT>_ untuk menampung _objects_ AsetIT
-* _Default constructor_ untuk inisialisasi _objects_ di daftarAset dari _ArrayList_
-* _Method_ tambahAset() untuk menambah 4 _objects_ AsetIT ke daftarAset
-* _Method_ tampilkanSemuaAset() untuk menampilkan semua data aset yang tersimpan dengan memanfaatkan _for-each looping_
-* _Method_ hapusAset() untuk mencari kemudian menghapus data aset menggunakan ID-nya, penerapan mekanisme _iterator_
-
 
 #### 3. MainAset
+* Deklarasi _class_ dan _main method_
 ```java
-package Praktikum4.Tugas;
-
-
 public class MainAset {
     public static void main(String[] args) {
-        // a. instansiasi objek ManajemenAset
-        ManajemenAset manajemen = new ManajemenAset();
-        
-        // b.i. menambah 4 data aset
-        manajemen.tambahAset(new AsetIT("A01", "Mouse Kabel 1 meter", "Lab Komputer", "Baik dan kadang menghilang"));
+```
+* Instansiasi _objects_ ManajemenAset
+```java
+ManajemenAset manajemen = new ManajemenAset();
+```
+* Penambahan data aset
+```java
+manajemen.tambahAset(new AsetIT("A01", "Mouse Kabel 1 meter", "Lab Komputer", "Baik dan kadang menghilang"));
         manajemen.tambahAset(new AsetIT("A02", "Smart TV 50 inch", "Lab Komputer", "Baik dan sedang menghilang"));
         manajemen.tambahAset(new AsetIT("A03", "Proyektor", "Ruang 17", "Baik walau kadang bergetar"));
         manajemen.tambahAset(new AsetIT("A04", "Smart TV 32 inch", "Ruang 19", "Sangat baik"));
-        
-        //b.ii. tampilkan semua aset
-        System.out.println("DAFTAR ASET IT (awal)");
+```
+* Menampilkan data aset awal
+```java
+System.out.println("DAFTAR ASET IT (awal)");
         System.out.println("------------------------------\n");
         manajemen.tampilkanSemuaAset();
-        
-        // b.iii. hapus salah satu aset menggunakan ID valid
-        System.out.println("Menghapus aset dengan ID 'A03'...");
+```
+* Menghapus data aset
+```java
+System.out.println("Menghapus aset dengan ID 'A03'...");
         manajemen.hapusAset("A03");
-        
-        // b.iv. tampilkan kembali semua aset setelah operasi penghapusan
-        System.out.println("DAFTAR ASET IT (setelah dihapus)");
+```
+* Menampilkan kembali data setelah penghapusan salah satu data aset
+```java
+System.out.println("DAFTAR ASET IT (setelah dihapus)");
         System.out.println("------------------------------\n");
         manajemen.tampilkanSemuaAset();
     }
 }
+```
+
+
+#### _Output_ Program
+```text
+DAFTAR ASET IT (awal)
+------------------------------
+
+ID Aset: A01
+Nama Perangkat: Mouse Kabel 1 meter
+Lokasi: Lab Komputer
+Status Kondisi: Baik dan kadang menghilang
+------------------------------
+
+ID Aset: A02
+Nama Perangkat: Smart TV 50 inch
+Lokasi: Lab Komputer
+Status Kondisi: Baik dan sedang menghilang
+------------------------------
+
+ID Aset: A03
+Nama Perangkat: Proyektor
+Lokasi: Ruang 17
+Status Kondisi: Baik walau kadang bergetar
+------------------------------
+
+ID Aset: A04
+Nama Perangkat: Smart TV 32 inch
+Lokasi: Ruang 19
+Status Kondisi: Sangat baik
+------------------------------
+
+Menghapus aset dengan ID 'A03'...
+Aset dengan ID 'A03' telah dihapus.
+
+DAFTAR ASET IT (setelah dihapus)
+------------------------------
+
+ID Aset: A01
+Nama Perangkat: Mouse Kabel 1 meter
+Lokasi: Lab Komputer
+Status Kondisi: Baik dan kadang menghilang
+------------------------------
+
+ID Aset: A02
+Nama Perangkat: Smart TV 50 inch
+Lokasi: Lab Komputer
+Status Kondisi: Baik dan sedang menghilang
+------------------------------
+
+ID Aset: A04
+Nama Perangkat: Smart TV 32 inch
+Lokasi: Ruang 19
+Status Kondisi: Sangat baik
+------------------------------
 ```
