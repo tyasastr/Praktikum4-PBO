@@ -3,47 +3,41 @@
 ### Identitas
 **Tyasastri Hning Kurniasih (L0325034)**
 
-#### Source Code Java yang Digunakan:
+#### Detail Program
+Untuk memperdalam pemahaman terkait materi praktikum modul 04, dibuat program Manajemen Aset IT. Dibuat beberapa _classes_ dengan rincian: 
 #### 1. AsetIT
+* Deklarasi _class_ bernama AsetIT di dalam _package_ Tugas yang berada di dalam _package_ Praktikum4 (Praktikum4.Tugas)
 ```java
 package Praktikum4.Tugas;
 
 public class AsetIT {
-    // a. attributes
+```
+* _Attributes_ berupa String idAset, namaPerangkat, lokasi, dan statusKondisi
+``` java
     String idAset;
     String namaPerangkat;
     String lokasi;
     String statusKondisi;
-    
-    // b. parameterized constructor
-    public AsetIT(String idAset, String namaPerangkat, String lokasi, String statusKondisi) {
+```
+* _Parameterized constructor_ yang menerima nilai input _attributes_ saat _object_ dibuat di _public AsetIT(semua attributes)_, dan penggunaan _this.(attribute)_ yang merujuk spesifik ke _attribute_ milik instansi _object_ yang sedang diproses
+```java
+public AsetIT(String idAset, String namaPerangkat, String lokasi, String statusKondisi) {
         this.idAset = idAset;
         this.namaPerangkat = namaPerangkat;
         this.lokasi = lokasi;
         this.statusKondisi = statusKondisi;
     }
-    
-    // getter
-    public String getIDAset() {
-        return idAset;
-    }
-    
-    // c. method untuk mencetak data
-    public void tampilkanInfoAset() {
+```
+* _Method_ berupa _public void tampilkanInfoAset()_ untuk menampilkan informasi spesifikasi aset
+```java
+ public void tampilkanInfoAset() {
         System.out.println("ID Aset: " + idAset);
         System.out.println("Nama Perangkat: " + namaPerangkat);
         System.out.println("Lokasi: " + lokasi);
         System.out.println("Status Kondisi: " + statusKondisi);
         System.out.println("------------------------------\n");
     }
-}
 ```
-
-**Struktur _Source Code_**
-* Deklarasi _class_ bernama AsetIT di dalam _package_ Tugas yang berada di dalam _package_ Praktikum4 (Praktikum4.Tugas)
-* _Attributes_ berupa String idAset, namaPerangkat, lokasi, dan statusKondisi
-* _Parameterized constructor_ yang menerima nilai input _attributes_ saat _object_ dibuat di _public AsetIT(semua attributes)_, dan penggunaan _this.(attribute)_ yang merujuk spesifik ke _attribute_ milik instansi _object_ yang sedang diproses
-* _Method_ berupa _public void tampilkanInfoAset()_ untuk menampilkan informasi spesifikasi aset
 
 
 #### 2. ManajemenAset
