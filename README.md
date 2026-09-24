@@ -37,7 +37,8 @@ public class AsetIT {
         System.out.println("Status Kondisi: " + statusKondisi);
         System.out.println("------------------------------\n");
     }
-}
+}```
+
 
 2. ManajemenAset.java
 ```java
@@ -90,7 +91,8 @@ public class ManajemenAset {
             System.out.println("Aset dengan ID '" + idAset + "'tidak ditemukan!\n");
         }
     }
-}
+}```
+
 
 3. MainAset.java
 ```java
@@ -122,5 +124,5 @@ public class MainAset {
         System.out.println("------------------------------\n");
         manajemen.tampilkanSemuaAset();
     }
-}
+}```
 
