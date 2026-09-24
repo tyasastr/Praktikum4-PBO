@@ -3,6 +3,7 @@
 ### Identitas
 **Tyasastri Hning Kurniasih (L0325034)**
 
+---
 ### Diagram _Class_
 ```text
 src/
@@ -13,6 +14,7 @@ src/
 |       └── MainAset.java      # Main class untuk menjalankan program
 └─README.md
 ```
+---
 
 ### Detail Program
 #### 1. AsetIT
@@ -49,7 +51,7 @@ public AsetIT(String idAset, String namaPerangkat, String lokasi, String statusK
     }
 }
 ```
-
+---
 
 #### 2. ManajemenAset
 * _Import library_ berupa struktu data _ArrayList_, antarmuka _List_, dan _Iterator_ dari _utility library Java_
@@ -116,7 +118,7 @@ public void hapusAset(String idAset) {
     }
 }
 ```
-
+---
 
 #### 3. MainAset
 * Deklarasi _class_ dan _main method_ dalam _package_ Praktikum4.Tugas
@@ -156,7 +158,7 @@ System.out.println("DAFTAR ASET IT (setelah dihapus)");
     }
 }
 ```
-
+---
 
 ### _Output_ Program
 ```text
