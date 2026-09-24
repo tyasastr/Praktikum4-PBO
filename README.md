@@ -5,7 +5,7 @@
 ### NIM: L0325034
 ---
 #### Source Code Java yang Digunakan:
-#### 1. AsetIT.java
+#### 1. AsetIT
 ```java
 package Praktikum4.Tugas;
 
@@ -39,6 +39,7 @@ public class AsetIT {
     }
 }
 ```
+
 #### 2. ManajemenAset
 ```java
 package Praktikum4.Tugas;
@@ -89,6 +90,39 @@ public class ManajemenAset {
         if (!ditemukan) {
             System.out.println("Aset dengan ID '" + idAset + "'tidak ditemukan!\n");
         }
+    }
+}
+```
+
+#### 3. MainAset
+```java
+package Praktikum4.Tugas;
+
+
+public class MainAset {
+    public static void main(String[] args) {
+        // a. instansiasi objek ManajemenAset
+        ManajemenAset manajemen = new ManajemenAset();
+        
+        // b.i. menambah 4 data aset
+        manajemen.tambahAset(new AsetIT("A01", "Mouse Kabel 1 meter", "Lab Komputer", "Baik dan kadang menghilang"));
+        manajemen.tambahAset(new AsetIT("A02", "Smart TV 50 inch", "Lab Komputer", "Baik dan sedang menghilang"));
+        manajemen.tambahAset(new AsetIT("A03", "Proyektor", "Ruang 17", "Baik walau kadang bergetar"));
+        manajemen.tambahAset(new AsetIT("A04", "Smart TV 32 inch", "Ruang 19", "Sangat baik"));
+        
+        //b.ii. tampilkan semua aset
+        System.out.println("DAFTAR ASET IT (awal)");
+        System.out.println("------------------------------\n");
+        manajemen.tampilkanSemuaAset();
+        
+        // b.iii. hapus salah satu aset menggunakan ID valid
+        System.out.println("Menghapus aset dengan ID 'A03'...");
+        manajemen.hapusAset("A03");
+        
+        // b.iv. tampilkan kembali semua aset setelah operasi penghapusan
+        System.out.println("DAFTAR ASET IT (setelah dihapus)");
+        System.out.println("------------------------------\n");
+        manajemen.tampilkanSemuaAset();
     }
 }
 ```
