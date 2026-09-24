@@ -3,13 +3,17 @@
 ### Identitas
 **Tyasastri Hning Kurniasih (L0325034)**
 
-#### Struktur Program
+### Struktur Program
+```text
 src/
 └── Praktikum4/
     └── Tugas/
         ├── AsetIT.java        # Class model untuk entitas Aset IT
         ├── ManajemenAset.java # Class controller (mengelola List/LinkedList)
         └── MainAset.java      # Main class untuk menjalankan program
+```
+
+### Detail Program
 #### 1. AsetIT
 * Deklarasi _class_ bernama AsetIT di dalam _package_ Tugas yang berada di dalam _package_ Praktikum4 (Praktikum4.Tugas)
 ```java
@@ -152,7 +156,7 @@ System.out.println("DAFTAR ASET IT (setelah dihapus)");
 ```
 
 
-#### _Output_ Program
+### _Output_ Program
 ```text
 DAFTAR ASET IT (awal)
 ------------------------------
