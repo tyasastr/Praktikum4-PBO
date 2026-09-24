@@ -2,7 +2,6 @@
 ## Modul 04: Array of Objects, JSF, List, ArrayList, LinkedList, Iterator
 ### Identitas
 **Tyasastri Hning Kurniasih (L0325034)**
----
 
 #### Source Code Java yang Digunakan:
 #### 1. AsetIT
@@ -39,6 +38,13 @@ public class AsetIT {
     }
 }
 ```
+
+**Struktur _Source Code_**
+* Deklarasi _class_ bernama AsetIT di dalam _package_ Tugas yang berada di dalam _package_ Praktikum4 (Praktikum4.Tugas)
+* _Attributes_ berupa String idAset, namaPerangkat, lokasi, dan statusKondisi
+* _Parameterized constructor_ yang menerima nilai input _attributes_ saat _object_ dibuat di _public AsetIT(semua attributes)_, dan penggunaan _this.(attribute)_ yang merujuk spesifik ke _attribute_ milik instansi _object_ yang sedang diproses
+* _Method_ berupa _public void tampilkanInfoAset()_ untuk menampilkan informasi spesifikasi aset
+
 
 #### 2. ManajemenAset
 ```java
@@ -93,6 +99,15 @@ public class ManajemenAset {
     }
 }
 ```
+
+**Struktur _Source Code_**
+* _Import library_ berupa struktu data _ArrayList_, antarmuka _List_, dan _Iterator_ dari _utility library Java_
+* Deklarasi _attributes collection_ menggunakan _ArrayList<AsetIT>_ untuk menampung _objects_ AsetIT
+* _Default constructor_ untuk inisialisasi _objects_ di daftarAset dari _ArrayList_
+* _Method_ tambahAset() untuk menambah 4 _objects_ AsetIT ke daftarAset
+* _Method_ tampilkanSemuaAset() untuk menampilkan semua data aset yang tersimpan dengan memanfaatkan _for-each looping_
+* _Method_ hapusAset() untuk mencari kemudian menghapus data aset menggunakan ID-nya, penerapan mekanisme _iterator_
+
 
 #### 3. MainAset
 ```java
