@@ -6,7 +6,7 @@
 ---
 #### Source Code Java yang Digunakan:
 1. AsetIT.java
-'''java
+```java
 package Praktikum4.Tugas;
 
 public class AsetIT {
@@ -40,7 +40,7 @@ public class AsetIT {
 }
 
 2. ManajemenAset.java
-'''java
+```java
 package Praktikum4.Tugas;
 
 import java.util.ArrayList;
@@ -93,7 +93,7 @@ public class ManajemenAset {
 }
 
 3. MainAset.java
-'''java
+```java
 package Praktikum4.Tugas;
 
 
