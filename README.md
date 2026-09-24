@@ -3,14 +3,15 @@
 ### Identitas
 **Tyasastri Hning Kurniasih (L0325034)**
 
-### Struktur Program
+### Diagram _Class_
 ```text
 src/
 └── Praktikum4/
-    └── Tugas/
-        ├── AsetIT.java        # Class model untuk entitas Aset IT
-        ├── ManajemenAset.java # Class controller (mengelola List/LinkedList)
-        └── MainAset.java      # Main class untuk menjalankan program
+|    └── Tugas/
+|       ├── AsetIT.java        # Class model untuk entitas Aset IT
+|       ├── ManajemenAset.java # Class controller (mengelola List/LinkedList)
+|       └── MainAset.java      # Main class untuk menjalankan program
+└─README.md
 ```
 
 ### Detail Program
