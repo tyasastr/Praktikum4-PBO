@@ -1,8 +1,8 @@
 # Praktikum Pemrograman Berorientasi Objek
 ## Modul 04: Array of Objects, JSF, List, ArrayList, LinkedList, Iterator
 ### Identitas
-**Nama: Tyasastri Hning Kurniasih**
-**NIM: L0325034**
+**Tyasastri Hning Kurniasih (L0325034)**
+
 #### Source Code Java yang Digunakan:
 #### 1. AsetIT
 ```java
