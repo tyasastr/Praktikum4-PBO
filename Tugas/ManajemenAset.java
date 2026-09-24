@@ -9,7 +9,7 @@ import java.util.List;
 
 public class ManajemenAset {
     // attribute
-    private List<AsetIT> daftarAset;
+    private ArrayList<AsetIT> daftarAset;
     
     public ManajemenAset() {
         this.daftarAset = new ArrayList<>();
