@@ -31,7 +31,7 @@ public class AsetIT {
     String lokasi;
     String statusKondisi;
 ```
-* _Parameterized constructor_ yang menerima nilai input _attributes_ saat _object_ dibuat di `public AsetIT(String idAset, String namaPerangkat, String lokasi, String statusKondisi)`, dan penggunaan `this.(nama attribute) = nama attribute` yang merujuk spesifik ke _attribute_ milik instansi _object_ yang sedang diproses
+* _Parameterized constructor_ yang menerima nilai input _attributes_ saat _object_ dibuat di `public AsetIT(String idAset, String namaPerangkat, String lokasi, String statusKondisi)`, dan penggunaan `this.(nama attribute)` yang merujuk spesifik ke _attribute_ milik instansi _object_ yang sedang diproses
 ```java
 public AsetIT(String idAset, String namaPerangkat, String lokasi, String statusKondisi) {
         this.idAset = idAset;
