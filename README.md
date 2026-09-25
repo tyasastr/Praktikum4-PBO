@@ -121,14 +121,14 @@ public void hapusAset(String idAset) {
 ---
 
 #### 3. `MainAset`
-* Deklarasi _class_ `MainAser` dan _main method_ `dalam _package_ `Praktikum4.Tugas`
+* Deklarasi _class_ `MainAser` dan _main method_ dalam _package_ `Praktikum4.Tugas`
 ```java
 package Praktikum4.Tugas;
 
 public class MainAset {
     public static void main(String[] args) {
 ```
-* Instansiasi _objects_ ManajemenAset
+* Instansiasi _objects_ 'ManajemenAset'
 ```java
 ManajemenAset manajemen = new ManajemenAset();
 ```
