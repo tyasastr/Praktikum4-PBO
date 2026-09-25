@@ -10,7 +10,7 @@ src/
 └── Praktikum4/
 |    └── Tugas/
 |       ├── AsetIT.java        # Class model untuk entitas Aset IT
-|       ├── ManajemenAset.java # Class controller (mengelola List/LinkedList)
+|       ├── ManajemenAset.java # Class controller (mengelola List)
 |       └── MainAset.java      # Main class untuk menjalankan program
 └─README.md
 ```
