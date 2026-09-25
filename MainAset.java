@@ -10,10 +10,10 @@ public class MainAset {
         ManajemenAset manajemen = new ManajemenAset();
         
         // b.i. menambah 4 data aset
-        manajemen.tambahAset(new AsetIT("A01", "Mouse Kabel 1 meter", "Lab Komputer", "Baik dan kadang menghilang"));
-        manajemen.tambahAset(new AsetIT("A02", "Smart TV 50 inch", "Lab Komputer", "Baik dan sedang menghilang"));
-        manajemen.tambahAset(new AsetIT("A03", "Proyektor", "Ruang 17", "Baik walau kadang bergetar"));
-        manajemen.tambahAset(new AsetIT("A04", "Smart TV 32 inch", "Ruang 19", "Sangat baik"));
+        manajemen.tambahAset(new AsetIT("A01", "Router", "Ruang 1", "Baik"));
+        manajemen.tambahAset(new AsetIT("A02", "Server", "Lab Komputer", "Baik"));
+        manajemen.tambahAset(new AsetIT("A03", "Switch", "Ruang 17", "Butuh perbaikan"));
+        manajemen.tambahAset(new AsetIT("A04", "PC", "Lab Komputer", "Baik"));
         
         //b.ii. tampilkan semua aset
         System.out.println("DAFTAR ASET IT (awal)");
