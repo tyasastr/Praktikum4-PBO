@@ -17,8 +17,8 @@ src/
 ---
 
 ### Detail Program
-#### 1. AsetIT
-* Deklarasi _class_ bernama AsetIT di dalam _package_ Tugas yang berada di dalam _package_ Praktikum4 (Praktikum4.Tugas)
+#### 1. `AsetIT`
+* Deklarasi _class_ bernama `AsetIT` di dalam _package_ `Tugas` yang berada di dalam _package_ `Praktikum4`
 ```java
 package Praktikum4.Tugas;
 
@@ -31,7 +31,7 @@ public class AsetIT {
     String lokasi;
     String statusKondisi;
 ```
-* _Parameterized constructor_ yang menerima nilai input _attributes_ saat _object_ dibuat di _public AsetIT(semua attributes)_, dan penggunaan _this.(attribute)_ yang merujuk spesifik ke _attribute_ milik instansi _object_ yang sedang diproses
+* _Parameterized constructor_ yang menerima nilai input _attributes_ saat _object_ dibuat di `public AsetIT(semua attributes)`, dan penggunaan `this.(attribute)` yang merujuk spesifik ke _attribute_ milik instansi _object_ yang sedang diproses
 ```java
 public AsetIT(String idAset, String namaPerangkat, String lokasi, String statusKondisi) {
         this.idAset = idAset;
@@ -40,7 +40,7 @@ public AsetIT(String idAset, String namaPerangkat, String lokasi, String statusK
         this.statusKondisi = statusKondisi;
     }
 ```
-* _Method_ berupa _public void tampilkanInfoAset()_ untuk menampilkan informasi spesifikasi aset
+* _Method_ berupa `public void tampilkanInfoAset()` untuk menampilkan informasi spesifikasi aset
 ```java
  public void tampilkanInfoAset() {
         System.out.println("ID Aset: " + idAset);
@@ -53,7 +53,7 @@ public AsetIT(String idAset, String namaPerangkat, String lokasi, String statusK
 ```
 ---
 
-#### 2. ManajemenAset
+#### 2. `ManajemenAset`
 * _Import library_ berupa struktu data _ArrayList_, antarmuka _List_, dan _Iterator_ dari _utility library Java_
 ```java
 package Praktikum4.Tugas;
@@ -62,24 +62,24 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 ```
-* Deklarasi _class_ ManajemenAset dan _attributes collection_ menggunakan _ArrayList<AsetIT>_ untuk menampung _objects_ AsetIT
+* Deklarasi _class_ `ManajemenAset` dan _attributes collection_ menggunakan `ArrayList<AsetIT>` untuk menampung _objects_ `AsetIT`
 ```java
 public class ManajemenAset {
     ArrayList<AsetIT> daftarAset;
 ```
-* _Default constructor_ untuk inisialisasi _objects_ di daftarAset dari _ArrayList_
+* _Default constructor_ untuk inisialisasi _objects_ di `daftarAset` dari _ArrayList_
 ```java
 public ManajemenAset() {
         this.daftarAset = new ArrayList<>();
     }
 ```
-* _Method_ tambahAset() untuk menambah 4 _objects_ AsetIT ke daftarAset
+* _Method_ `tambahAset()` untuk menambah 4 _objects_ `AsetIT` ke `daftarAset`
 ```java
 public void tambahAset(AsetIT asetBaru) {
         daftarAset.add(asetBaru);
     }
 ```
-* _Method_ tampilkanSemuaAset() untuk menampilkan semua data aset yang tersimpan dengan memanfaatkan _for-each looping_
+* _Method_ `tampilkanSemuaAset()` untuk menampilkan semua data aset yang tersimpan dengan memanfaatkan _for-each looping_
 ```java
 public void tampilkanSemuaAset() {
         if(daftarAset.isEmpty()) {
@@ -91,12 +91,12 @@ public void tampilkanSemuaAset() {
         }
     }
 ```
-* _Method_ hapusAset() untuk mencari kemudian menghapus data aset menggunakan ID-nya, penerapan mekanisme _iterator_, yaitu:
-   _Iterator<AsetIT> iterator = daftarAset.iterator()_ untuk inisialisasi _iterator_
-   _iterator.hasNext()_ untuk memeriksa ketersediaan elemen berikutnya
-   _iterator.next()_ untuk mengambil referensi elemen yang sedang diakses
-   _equalsIgnoreCase()_ untuk membandingkan ID tanpa pengaruh kapitalisasi huruf
-   _iterator.remove()_ untuk menghapus elemen
+* _Method_ `hapusAset()` untuk mencari kemudian menghapus data aset menggunakan ID-nya, penerapan mekanisme _iterator_, yaitu:
+   `Iterator<AsetIT> iterator = daftarAset.iterator()` untuk inisialisasi _iterator_
+   `iterator.hasNext()` untuk memeriksa ketersediaan elemen berikutnya
+   `iterator.next()` untuk mengambil referensi elemen yang sedang diakses
+   `equalsIgnoreCase()` untuk membandingkan ID tanpa pengaruh kapitalisasi huruf
+   `iterator.remove()` untuk menghapus elemen
 ```java
 public void hapusAset(String idAset) {
         Iterator<AsetIT> iterator = daftarAset.iterator();
@@ -120,8 +120,8 @@ public void hapusAset(String idAset) {
 ```
 ---
 
-#### 3. MainAset
-* Deklarasi _class_ dan _main method_ dalam _package_ Praktikum4.Tugas
+#### 3. `MainAset`
+* Deklarasi _class_ `MainAser` dan _main method_ `dalam _package_ `Praktikum4.Tugas`
 ```java
 package Praktikum4.Tugas;
 
