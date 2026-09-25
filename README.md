@@ -134,10 +134,10 @@ ManajemenAset manajemen = new ManajemenAset();
 ```
 * Penambahan data aset
 ```java
-manajemen.tambahAset(new AsetIT("A01", "Mouse Kabel 1 meter", "Lab Komputer", "Baik dan kadang menghilang"));
-        manajemen.tambahAset(new AsetIT("A02", "Smart TV 50 inch", "Lab Komputer", "Baik dan sedang menghilang"));
-        manajemen.tambahAset(new AsetIT("A03", "Proyektor", "Ruang 17", "Baik walau kadang bergetar"));
-        manajemen.tambahAset(new AsetIT("A04", "Smart TV 32 inch", "Ruang 19", "Sangat baik"));
+        manajemen.tambahAset(new AsetIT("A01", "Router", "Ruang 101", "Baik"));
+        manajemen.tambahAset(new AsetIT("A02", "Server", "Lab Komputer", "Baik"));
+        manajemen.tambahAset(new AsetIT("A03", "Switch", "Ruang 17", "Butuh perbaikan"));
+        manajemen.tambahAset(new AsetIT("A04", "PC", "Lab Komputer", "Baik"));
 ```
 * Menampilkan data aset awal
 ```java
@@ -166,50 +166,50 @@ DAFTAR ASET IT (awal)
 ------------------------------
 
 ID Aset: A01
-Nama Perangkat: Mouse Kabel 1 meter
-Lokasi: Lab Komputer
-Status Kondisi: Baik dan kadang menghilang
+Nama Perangkat: Router
+Lokasi: Ruang 101
+Status Kondisi: Baik
 ------------------------------
 
 ID Aset: A02
-Nama Perangkat: Smart TV 50 inch
+Nama Perangkat: Server
 Lokasi: Lab Komputer
-Status Kondisi: Baik dan sedang menghilang
+Status Kondisi: Baik
 ------------------------------
 
 ID Aset: A03
-Nama Perangkat: Proyektor
-Lokasi: Ruang 17
-Status Kondisi: Baik walau kadang bergetar
+Nama Perangkat: Switch
+Lokasi: Ruang 171
+Status Kondisi: Butuh perbaikan
 ------------------------------
 
 ID Aset: A04
-Nama Perangkat: Smart TV 32 inch
-Lokasi: Ruang 19
-Status Kondisi: Sangat baik
+Nama Perangkat: PC
+Lokasi: Lab Komputer
+Status Kondisi: Baik
 ------------------------------
 
-Menghapus aset dengan ID 'A03'...
+Menghapus aset dengan ID 'A03'
 Aset dengan ID 'A03' telah dihapus.
 
 DAFTAR ASET IT (setelah dihapus)
 ------------------------------
 
 ID Aset: A01
-Nama Perangkat: Mouse Kabel 1 meter
-Lokasi: Lab Komputer
-Status Kondisi: Baik dan kadang menghilang
+Nama Perangkat: Router
+Lokasi: Ruang 101
+Status Kondisi: Baik
 ------------------------------
 
 ID Aset: A02
-Nama Perangkat: Smart TV 50 inch
+Nama Perangkat: Server
 Lokasi: Lab Komputer
-Status Kondisi: Baik dan sedang menghilang
+Status Kondisi: Baik
 ------------------------------
 
 ID Aset: A04
-Nama Perangkat: Smart TV 32 inch
-Lokasi: Ruang 19
-Status Kondisi: Sangat baik
+Nama Perangkat: PC
+Lokasi: Lab Komputer
+Status Kondisi: Baik
 ------------------------------
 ```
