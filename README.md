@@ -92,11 +92,11 @@ public void tampilkanSemuaAset() {
     }
 ```
 * _Method_ `hapusAset()` untuk mencari kemudian menghapus data aset menggunakan ID-nya, penerapan mekanisme _iterator_, yaitu:
-   `Iterator<AsetIT> iterator = daftarAset.iterator()` untuk inisialisasi _iterator_
-   `iterator.hasNext()` untuk memeriksa ketersediaan elemen berikutnya
-   `iterator.next()` untuk mengambil referensi elemen yang sedang diakses
-   `equalsIgnoreCase()` untuk membandingkan ID tanpa pengaruh kapitalisasi huruf
-   `iterator.remove()` untuk menghapus elemen
+  a.  `Iterator<AsetIT> iterator = daftarAset.iterator()` untuk inisialisasi _iterator_
+  b.  `iterator.hasNext()` untuk memeriksa ketersediaan elemen berikutnya
+  c.  `iterator.next()` untuk mengambil referensi elemen yang sedang diakses
+  d.  `equalsIgnoreCase()` untuk membandingkan ID tanpa pengaruh kapitalisasi huruf
+  e.  `iterator.remove()` untuk menghapus elemen
 ```java
 public void hapusAset(String idAset) {
         Iterator<AsetIT> iterator = daftarAset.iterator();
